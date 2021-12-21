@@ -1,20 +1,21 @@
 import React from 'react';
+import ValidateInscription from '../components/ValidateInscription';
 
 const Inscription = () => {
     return (
         <div className='inscription'>
             <div>
-            <label for="">Nom de l'utilisateur</label>
-            <input type="text" width="30%"></input>
+            <label htmlFor="">Nom de l'utilisateur</label>
+            <input type="text" width="30%" className='user'></input>
 
         </div>
         <div>
-            <label for="">Mot de passe</label>
-            <input type="text" width="30%"></input>
+            <label htmlFor="">Mot de passe</label>
+            <input type="text" width="30%" className='pass'></input>
 
         </div>
 
-        <button>OK</button>
+        <ValidateInscription/>
 
         </div>
     );
