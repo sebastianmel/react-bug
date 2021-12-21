@@ -13,7 +13,7 @@ const ValidateInscription = () => {
 
     useEffect(() => {
         axios
-            .get('http://greenvelvet.alwaysdata.net/bugTracker/api/signup/'+ userN+"/"+password)
+            .get('http://greenvelvet.alwaysdata.net/bugTracker/api/signup/'+ userN+'/'+password)
             .then((res) => setData(res.data));
 
             
