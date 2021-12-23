@@ -1,23 +1,24 @@
 import React from 'react';
 import {NavLink } from 'react-router-dom';
+import Login from '../components/Login';
 
 
 
 const Connection = () => {
     return (
         <div className='connection'>
-            <div>
-                <label htmlFor="">Nom de l'utilisateur</label>
-                <input type="text" width="30%"></input>
+            <h1>BUG TRACKER</h1>
+            <div className='champ'>
+                <h2>Nom de l'utilisateur</h2>
+                <input type="text" className='user'></input>
 
-            </div>
-            <div>
-                <label htmlFor="">Mot de passe </label>
-                <input type="text" width="30%"></input>
+                <h2>Mot de passe </h2>
+                <input type="password"className='pass' ></input> <br/>
 
+                <Login/> <br/>
+            <NavLink exact to={`/register`}><u>s'inscrire</u></NavLink>
             </div>
-            <button>Connection</button>
-            <NavLink exact to={`/register`}><button type="button" class="btn btn-outline-success"  >Inscription</button></NavLink>
+    
             
         </div>
     );

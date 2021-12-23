@@ -1,5 +1,48 @@
 .inscription{
-    border: 2px red solid;
-    text-align: center;
-    padding: 20%;
+    h1{
+        text-align: center;
+    }
+    // padding-top: 10px;
+    background-color: white;
+    border: 2px black solid;
+    
+    width: 30%;
+    
+    margin: auto;
+    .champ{
+        .linkBot{
+            border: none;
+            margin: auto;
+            width: 300px;
+            text-align: center;
+           }
+        h2{
+            font-size: 12px;
+            border:none;
+            ;
+        }
+        input{
+            width: 100%;
+            padding-bottom: 15px;
+            background-color: $color-1;
+            margin-bottom: 30px;
+        }
+
+        .inscriptionBtn{
+            
+            
+            button{
+                width: 100%;
+                height: 40px;
+                background: $color-1;
+                border-radius: 10px;
+            }
+        }
+      
+        
+        width: 60%;
+        margin: auto;
+
+
+    }
 }

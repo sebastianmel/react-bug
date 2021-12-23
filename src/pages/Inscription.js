@@ -1,21 +1,30 @@
 import React from 'react';
+import {NavLink } from 'react-router-dom';
 import ValidateInscription from '../components/ValidateInscription';
+
 
 const Inscription = () => {
     return (
         <div className='inscription'>
-            <div>
-            <label htmlFor="">Nom de l'utilisateur</label>
-            <input type="text" width="30%" className='user'></input>
+            <h1>BUG TRACKER</h1>
+            <div className='champ'>
 
-        </div>
-        <div>
-            <label htmlFor="">Mot de passe</label>
-            <input type="text" width="30%" className='pass'></input>
+                <h2>Nom de l'utilisateur</h2>
+                <input type="text"  className='user'></input>
 
-        </div>
+           
+        
+                <h2>Mot de passe</h2>
+                <input type="password"  className='pass1' name="password" minLength="8" required></input>
 
-        <ValidateInscription/>
+                <h2>Retaper le mot le passe</h2>
+                <input type="password"  className='pass2' name="password2" minLength="8" required></input>
+
+            <ValidateInscription /><br></br>
+            <NavLink  exact to={`/`} className="linkBot"><u>Se connecter</u></NavLink>
+
+            </div>
+            
 
         </div>
     );
