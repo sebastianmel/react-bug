@@ -2,24 +2,26 @@ import React from 'react';
 import { useEffect , useState } from 'react';
 import axios from 'axios';
 
-const task = () => {
+const Task = () => {
     const [data, setData] = useState('');
-   
-
+    const token = localStorage.getItem('token');
+    
+    
     useEffect(() => {
         axios
-            .get('http://greenvelvet.alwaysdata.net/kwick/api/list/')
-            .then((res) => setData(res.data));
-
-            console.log(data);
+            .get('http://greenvelvet.alwaysdata.net/bugTracker/api/list/'+token+'/0')
+            .then((res) => setData(res));
+            console.log(token);
             
-    }, []);
+            
+        }, []);
+        console.log(data);
 
     return (
         
              <div className="bug-list">
 
-                {/* {Object.keys(data).map((key) => {
+                {/* {Object.keys(data.result.bug).map((key) => {
                     return <div className="bugs"><p>{data[key].title}</p>  <br/></div>
                 })} */}
 
@@ -29,4 +31,4 @@ const task = () => {
     );
 };
 
-export default task;
+export default Task;

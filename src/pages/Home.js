@@ -12,7 +12,7 @@ const Home = () => {
 
                 <a>Liste complète</a>
                 <a>A traiter</a>
-                <button className='navBtn'>Ajouter</button>
+                <NavLink  exact to={`/add`} className="linkBot"> <button className='navBtn'>Ajouter</button></NavLink>
                 <Logout/>
                 </div>
 

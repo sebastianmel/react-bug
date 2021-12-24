@@ -4,24 +4,24 @@ import axios from 'axios';
 
 const Logout = () => {
 
-    const [login, setLogin] = useState('');
+    const [logout, setLogout] = useState('');
     
    
 
     const Logout =()=> {
-        let token = localStorage.getItem('uesrN') ;
+        const token = localStorage.getItem('token');
         
         
         axios
          .get('http://greenvelvet.alwaysdata.net/bugTracker/api/logout/'+token )
-         .then((res) => setLogin(res));
-         console.log(login);
+         .then((res) => setLogout(res));
+         console.log(logout);
          
-         if(login.data.result.status==='done'){
+         if(logout.data.result.status==='done'){
              
              window.location.href="/home"
             } 
-            alert(login.data.result.message);
+            alert(logout.data.result.message);
        
     };
 

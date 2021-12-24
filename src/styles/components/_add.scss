@@ -1,0 +1,14 @@
+.form{
+    border: 2px red solid;
+    display: flex;
+    .addLabel{
+        width: 100%;
+
+        .addInputText{
+            width: 100%;
+        }
+        .addInputTextaera{
+            width: 100%;
+        }
+    }
+}
