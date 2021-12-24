@@ -1,0 +1,22 @@
+.homeToDo{
+    nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border: 2px black solid;
+        background-color:$color-6 ;
+
+        .navRightPart{
+            
+            
+           .navBtn{
+               background: #4A86E8;
+               color: white;
+               height: 30px;
+               margin: 5px;
+               
+           } 
+        }
+        
+    }
+}

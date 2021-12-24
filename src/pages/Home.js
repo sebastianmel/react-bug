@@ -11,7 +11,7 @@ const Home = () => {
                 <div className='navRightPart'>
 
                 <a>Liste complète</a>
-                <a>A traiter</a>
+                <NavLink  exact to={`/home/todo`} className="linkBot"><a>A traiter</a></NavLink>
                 <NavLink  exact to={`/add`} className="linkBot"> <button className='navBtn'>Ajouter</button></NavLink>
                 <Logout/>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Redirect} from 'react-router-dom';
+
 import axios from 'axios';
 
 
@@ -17,17 +17,35 @@ const Login = () => {
             
             axios
             .get('http://greenvelvet.alwaysdata.net/bugTracker/api/login/'+ userN+'/'+password)
-            .then((res) => setLogin(res));
+            .then((res) => setLogin(res))
+            .then( ()=>{
+                if(login!==undefined && login.data.result.status==='done' ){
+                    let token = localStorage.setItem( 'token', login.data.result.token);
+                    let user_id = localStorage.setItem( 'user_id', login.data.result.id);
+    
+                    console.log(user_id);
+                    console.log(token);
+                    console.log(userN);
+                    
+                 window.location.href="/home"
+                } 
+                alert(login.data.result.message);
+            }
+
+            );
             console.log(login);
-            
-            if(login.data.result.status==='done'){
-                let token = localStorage.setItem( 'token', login.data.result.token);
-                console.log(token);
-                console.log(userN);
+             
+            // if(login!=undefined && login.data.result.status==='done' ){
+            //     let token = localStorage.setItem( 'token', login.data.result.token);
+            //     let user_id = localStorage.setItem( 'user_id', login.data.result.id);
+
+            //     console.log(user_id);
+            //     console.log(token);
+            //     console.log(userN);
                 
-             window.location.href="/home"
-            } 
-            alert(login.data.result.message);
+            // //  window.location.href="/home"
+            // } 
+            // alert(login.data.result.message);
        
     };
 

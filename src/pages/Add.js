@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink } from 'react-router-dom';
+import AddBtn from '../components/AddBtn';
 
 const Add = () => {
     return (
@@ -8,10 +9,10 @@ const Add = () => {
             <h1>Bug tracker</h1>
             <div className='navRightPart'>
 
-            <a>Liste complète</a>
-            <a>A traiter</a>
+            <NavLink  exact to={`/home`} ><a>Liste complète</a></NavLink>
+            <NavLink  exact to={`/home/todo`} ><a>A traiter</a></NavLink>
             <NavLink  exact to={`/home`} className="linkBot"> <button className='navBtn'>Annuler</button></NavLink>
-            <button className='navBtn'>Sauvegarder</button>
+            <AddBtn/>
             
             </div>
 

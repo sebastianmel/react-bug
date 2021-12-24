@@ -25,7 +25,7 @@ const ValidateInscription = () => {
                 alert(signup.data.result.message);
                 console.log(signup);
 
-        }else{
+        }else {
             alert('Ce ne sont pas les mêmes mots de passe!');
         }
 

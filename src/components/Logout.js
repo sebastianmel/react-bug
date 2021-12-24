@@ -15,13 +15,14 @@ const Logout = () => {
         axios
          .get('http://greenvelvet.alwaysdata.net/bugTracker/api/logout/'+token )
          .then((res) => setLogout(res));
-         console.log(logout);
+        //  console.log(logout.data.result.status);
          
-         if(logout.data.result.status==='done'){
-             
-             window.location.href="/home"
-            } 
-            alert(logout.data.result.message);
+         
+            
+             window.location.href="/"
+          
+            
+            alert('utilisateur deconnecté');
        
     };
 

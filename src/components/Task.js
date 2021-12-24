@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect , useState } from 'react';
 import axios from 'axios';
+import DelBtn from './DelBtn';
 
 const Task = () => {
     const [data, setData] = useState('');
@@ -16,14 +17,29 @@ const Task = () => {
             
         }, []);
         console.log(data);
-
-    return (
         
-             <div className="bug-list">
 
-                {/* {Object.keys(data.result.bug).map((key) => {
-                    return <div className="bugs"><p>{data[key].title}</p>  <br/></div>
-                })} */}
+
+        
+        return (
+        
+             <div >
+
+                {data && data.data.result.bug.map((key) => {
+
+                    return <div>
+                        <span>{key.title}</span>
+                        <span>{key.description}</span>
+                        <span>{key.id}</span>
+                        <span> {new Date(key.timestamp * 1000).toLocaleString()}</span>
+                        <DelBtn />
+
+
+                    </div>
+
+                })
+
+                }
 
 
             </div>
