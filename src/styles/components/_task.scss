@@ -1,0 +1,62 @@
+.container{
+    margin: auto ;
+    border: none;
+    width: 100%;
+    
+    
+    .topTask{
+        display: flex;
+        justify-content: space-between;
+        
+            max-width: 100%;
+       
+    }
+    .botTask{
+        
+        display: flex;      
+        justify-content: space-between;
+        background-color: white;
+        width: 100%;
+        button{
+            height: 30px;
+            width: 90px;
+            background-color: rgba(255, 0, 0, 0.693);
+            border: none;
+            border-radius: 15px;
+            color: white;
+
+        }
+        select{
+            height: 30px;
+            border-radius: 15px;
+        }
+        p{
+         width: 100%;
+         border:none;
+        }
+        span{
+            border:none;
+            width: 10%;
+
+        }
+        .btnDiv{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 1300px) {
+            span{
+                border: none;
+                width: 20%;
+                
+        
+            }
+
+         }
+         @media (max-width: 1200px) {
+            .botTask{
+                flex-wrap: wrap;
+            }
+         }
+    }
+}

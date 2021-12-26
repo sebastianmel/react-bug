@@ -1,21 +1,21 @@
-import React from 'react';
-import { useEffect , useState } from 'react';
-import axios from 'axios';
+// import React from 'react';
+// import { useEffect , useState } from 'react';
+// import axios from 'axios';
 
-const DelBtn = () => {
+// const DelBtn = () => {
 
-    const [del, setDel] = useState('');
+//     const [del, setDel] = useState('');
     
    
 
-    const DelBtn =()=> {
-        const token = localStorage.getItem('token');
+//     const DelBtn =()=> {
+//         const token = localStorage.getItem('token');
         
         
-        axios
-         .get('http://greenvelvet.alwaysdata.net/bugTracker/api/delete/'+token+'/')
-         .then((res) => setDel(res));
-        //  console.log(logout.data.result.status);
+//         axios
+//          .get('http://greenvelvet.alwaysdata.net/bugTracker/api/delete/'+token+'/')
+//          .then((res) => setDel(res));
+//         //  console.log(logout.data.result.status);
          
          
             
@@ -23,11 +23,11 @@ const DelBtn = () => {
           
             
         
-        alert('suprimer');
-    };
-    return (
-        <button onClick={DelBtn} >supprimer</button>
-    );
-};
+//         alert('suprimer');
+//     };
+//     return (
+//         <button onClick={DelBtn} >supprimer</button>
+//     );
+// };
 
-export default DelBtn;
+// export default DelBtn;

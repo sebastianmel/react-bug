@@ -6,34 +6,33 @@ const AddBtn = () => {
    
     const token = localStorage.getItem('token');
     const user_id1 = localStorage.getItem('user_id');
+    const descrip = document.querySelector('.addInputTextaera').value;
+    const title = document.querySelector('.addInputText').value;
     
     
-
-    const [add, setAdd] = useState('');
+    
+    
     const AddTask =()=>{
 
-        axios
-         .post('http://greenvelvet.alwaysdata.net/bugTracker/api/add/'+token+'/'+user_id1 )
+        var body ={
+            "title" : title,
+            "description": descrip,
+        }
+        var requestOptions={
+            method:'POST',
+            body: JSON.stringify(body),
+        };
+
+        fetch('http://greenvelvet.alwaysdata.net/bugTracker/api/add/'+token+'/'+user_id1 , requestOptions)
+        .then(res => res.json())
+        .then(function(data) {
+            console.log(data.result);
+        })
+        .catch(error=> console.log('error', error));
+        window.location.href="/home";
+        alert('taks ajoutée');
+
         
-        
-         console.log(add);
-            
-        // if(add.date.result.status==='done'){
-
-
-        //      add.data.result.title === titre;
-        //      add.data.result.description === descri;
-
-        // }else{
-
-        // }
-         
-         
-            
-            //  window.location.href="/home"
-          
-            
-            // alert('taks ajoutée');
     }
 
     return (

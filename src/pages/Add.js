@@ -20,16 +20,13 @@ const Add = () => {
         <h1>Nouveau bug</h1>
         <div className='form'>
             
-        <label className='addLabel'>
-          Titre:
-            <input className='addInputText' type="text"  />
-        </label>
+        <h2 className='addLabel'>Titre:</h2>
+            <input placeholder="name" className='addInputText' type="text"></input>
         
 
-        <label className='addLabel'>
-            Description :
-          <textarea  className='addInputTextaera' />
-        </label>
+        <h2 className='addLabel'>Description :</h2>
+          <textarea className='addInputTextaera' />
+        
         </div>
     </div>
     );
