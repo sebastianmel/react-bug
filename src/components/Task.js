@@ -1,12 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import DelBtn from './DelBtn';
 
 
 const Task = () => {
     const [data, setData] = useState('');
     const token = localStorage.getItem('token');
-
+    
 
     useEffect(() => {
         axios
@@ -53,7 +54,8 @@ const Task = () => {
                                 <option value="1">en cours</option>
                                 <option value="2">traité</option>
                             </select>
-                            <button onClick="" >supprimer</button>
+                            {/* <button onClick="" >supprimer</button> */}
+                            <DelBtn id={key.id}/>
                         </div>
 
                     </div>
