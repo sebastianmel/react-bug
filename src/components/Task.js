@@ -15,9 +15,9 @@ const Task = () => {
         console.log(token);
 
 
-        console.log(data);
     }, []);
-
+    
+    console.log(data);
    
 
 
@@ -45,7 +45,7 @@ const Task = () => {
                         <span><p>{key.title}</p></span>
                         <span>{key.description}</span>
 
-                        <span>{key.id}</span>
+                        <span>{key.user_id}</span>
                         <span> {new Date(key.timestamp * 1000).toLocaleString()}</span>
                         <div className='btnDiv'>
                             <select >
