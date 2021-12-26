@@ -6,8 +6,8 @@ const AddBtn = () => {
    
     const token = localStorage.getItem('token');
     const user_id1 = localStorage.getItem('user_id');
-    const descrip = document.querySelector('.addInputTextaera').value;
-    const title = document.querySelector('.addInputText').value;
+    // const title = document.querySelector('.addInputText').value;
+    // const descrip = document.querySelector('.addInputTextaera').value;
     
     
     
@@ -15,8 +15,8 @@ const AddBtn = () => {
     const AddTask =()=>{
 
         var body ={
-            "title" : title,
-            "description": descrip,
+            "title" : document.querySelector('.addInputText').value,
+            "description": document.querySelector('.addInputTextaera').value,
         }
         var requestOptions={
             method:'POST',

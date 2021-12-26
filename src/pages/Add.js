@@ -21,7 +21,7 @@ const Add = () => {
         <div className='form'>
             
         <h2 className='addLabel'>Titre:</h2>
-            <input placeholder="name" className='addInputText' type="text"></input>
+            <input placeholder="name" className='addInputText' type="text" ></input>
         
 
         <h2 className='addLabel'>Description :</h2>
