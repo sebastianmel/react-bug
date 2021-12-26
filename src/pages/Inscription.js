@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink } from 'react-router-dom';
 import ValidateInscription from '../components/ValidateInscription';
 
-
+// Function for display  a form for register ------------------------------------------
 const Inscription = () => {
     return (
         <div className='inscription'>
@@ -20,6 +20,7 @@ const Inscription = () => {
                 <h2>Retaper le mot le passe</h2>
                 <input type="password"  className='pass2' name="password2" minLength="8" required></input>
 
+         {/* Component for validtion of the registration ---------------------------------------*/}
             <ValidateInscription /><br></br>
             <NavLink  exact to={`/`} className="linkBot"><u>Se connecter</u></NavLink>
 

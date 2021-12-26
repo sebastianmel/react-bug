@@ -3,8 +3,11 @@ import { useEffect , useState } from 'react';
 import axios from 'axios';
 import DelBtn from './DelBtn';
 
+// Function for show  user  task list  on click-------------------------------------------------
 const ToDo = () => {
     const [data, setData] = useState('');
+
+    //Recuparation of value stocked in the local Storage for the different requests---
     const token = localStorage.getItem('token');
     const user_id = localStorage.getItem('user_id');
     
@@ -17,7 +20,8 @@ const ToDo = () => {
             
             
         }, []);
-        console.log(data);
+        
+  // Array of tasks on the home page---------------------------------------------------      
     return (
         <div className='container'>
              <div className='topTask'>
@@ -43,7 +47,8 @@ const ToDo = () => {
                                 <option value="1">en cours</option>
                                 <option value="2">traité</option>
                             </select>
-                            <button onClick={DelBtn} >supprimer</button>
+      {/* My component for delete task , who take props of the previous function ------------------- */}                      
+                            <DelBtn id={key.id}/>
                         </div>
 
                 </div>  

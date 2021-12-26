@@ -3,6 +3,8 @@ import {NavLink } from 'react-router-dom';
 import Logout from '../components/Logout';
 import Task from '../components/Task';
 
+
+// Function for display  navigation and a task list------------------------------------------
 const Home = () => {
     return (
         <div className='home'>
@@ -18,6 +20,8 @@ const Home = () => {
 
             </nav>
             <div className='liste'>
+
+            {/* Component for display all tasks ---------------------------------------*/}
                 <Task/>
             </div>
         </div>

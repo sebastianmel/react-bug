@@ -3,7 +3,7 @@ import {NavLink } from 'react-router-dom';
 import Logout from '../components/Logout';
 import ToDo from '../components/ToDo';
 
-
+// Function for display  navigation and a task list ------------------------------------------
 const HomeToDo = () => {
     return (
         <div className='homeToDo'>
@@ -20,6 +20,7 @@ const HomeToDo = () => {
 
         </nav>
         <div className='liste'>
+            {/* Component for display tasks list ---------------------------------------*/}
             <ToDo/>
         </div>
     </div>

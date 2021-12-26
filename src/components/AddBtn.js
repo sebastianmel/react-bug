@@ -1,23 +1,23 @@
 import React from 'react';
-import { useState } from 'react';
-import axios from 'axios';
 
+
+// Function of the component  for add task ------------------------------------------------
 const AddBtn = () => {
-   
+
+
+//    Recuparation of value stocked in the local Storage for the different requests--------
     const token = localStorage.getItem('token');
     const user_id1 = localStorage.getItem('user_id');
-    // const title = document.querySelector('.addInputText').value;
-    // const descrip = document.querySelector('.addInputTextaera').value;
-    
-    
-    
-    
+
+    // Function for start AddTask on click -----------------------------------------------
     const AddTask =()=>{
 
+        // creatiion of an Object for the post method not with axios this time------------
         var body ={
             "title" : document.querySelector('.addInputText').value,
             "description": document.querySelector('.addInputTextaera').value,
         }
+        // With axios my requests have been blocked---------------------------------------
         var requestOptions={
             method:'POST',
             body: JSON.stringify(body),

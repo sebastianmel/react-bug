@@ -4,6 +4,10 @@ import axios from 'axios';
 import DelBtn from './DelBtn';
 
 
+// Funtion for display  all tasks --------------------------------------------------
+
+// recuperation of informations------------------------------------------------
+
 const Task = () => {
     const [data, setData] = useState('');
     const token = localStorage.getItem('token');
@@ -18,14 +22,7 @@ const Task = () => {
 
     }, []);
     
-    console.log(data);
-   
-
-
-
-       
-
-
+// Array of tasks on the home page---------------------------------------------------
 
         return (
 
@@ -54,7 +51,8 @@ const Task = () => {
                                 <option value="1">en cours</option>
                                 <option value="2">traité</option>
                             </select>
-                            {/* <button onClick="" >supprimer</button> */}
+                    
+    {/* My component for delete task , who take props of the previous function ------------------- */}
                             <DelBtn id={key.id}/>
                         </div>
 

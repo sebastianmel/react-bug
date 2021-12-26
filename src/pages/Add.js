@@ -2,6 +2,8 @@ import React from 'react';
 import {NavLink } from 'react-router-dom';
 import AddBtn from '../components/AddBtn';
 
+
+// Function for display  navigation and a little form for add task------------------------------------------
 const Add = () => {
     return (
         <div className='home'>

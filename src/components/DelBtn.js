@@ -1,14 +1,17 @@
 import React from 'react';
-import { useEffect , useState } from 'react';
+import {  useState } from 'react';
 import axios from 'axios';
 
-const DelBtn = (props) => {
 
-    const id = props.id;
+// Function for delete task with task.js props ------------------------------
+
+const DelBtn = (props) => { //recuperation of task.js  props-----------------
+
+    const id = props.id;  
     const [del, setDel] = useState('');
     
    
-
+// Function for start delete on click ---------------------------------------
     const DelFunct =()=> {
         const token = localStorage.getItem('token');
         
@@ -16,7 +19,6 @@ const DelBtn = (props) => {
         axios
          .get('http://greenvelvet.alwaysdata.net/bugTracker/api/delete/'+token+'/'+ id)
          .then((res) => setDel(res));
-        //  console.log(logout.data.result.status);
         alert('suprimer');
         window.location.reload(false);
         
