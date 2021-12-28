@@ -19,7 +19,7 @@ const ValidateInscription = () => {
         const password = document.querySelector('.pass1').value;
         const passwordVerif = document.querySelector('.pass2').value;
 
-        // And creation of some condition to restrict--------------------------------------------------------- 
+        // And creation of some condition to restrict-------------------------------------------------- 
         if (password === passwordVerif) {
             axios
                 .get('http://greenvelvet.alwaysdata.net/bugTracker/api/signup/' + userN + '/' + password)

@@ -32,23 +32,23 @@ const ToDo = () => {
                      <span>état/suprimer</span>
                  </div>
 
-        {data && data.data.result.bug.map((key) => {
+        {data && data.data.result.bug.map((bug) => {
 
             
             return <div className='botTask'> 
-                <span>{key.title}</span>  
-                <span>{key.description}</span> 
-                <span>{key.user_id}</span>
-                <span> {new Date(key.timestamp * 1000 ).toLocaleString()}</span>
+                <span>{bug.title}</span>  
+                <span>{bug.description}</span> 
+                <span>{bug.user_id}</span>
+                <span> {new Date(bug.timestamp * 1000 ).toLocaleString()}</span>
                 <div className='btnDiv'>
-                            <select >
+                            <select value={bug.state}>
                             
                                 <option value="0">non traité</option>
                                 <option value="1">en cours</option>
                                 <option value="2">traité</option>
                             </select>
       {/* My component for delete task , who take props of the previous function ------------------- */}                      
-                            <DelBtn id={key.id}/>
+                            <DelBtn id={bug.id}/>
                         </div>
 
                 </div>  
